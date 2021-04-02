@@ -1,0 +1,16 @@
+.DS_Store
+node_modules
+*.pyc
+*.pyo
+*.py~
+.idea
+build
+dist
+files.txt
+*.egg-info
+.coverage
+coverage.xml
+# virtual env
+venv/
+# additional virtual env
+osx/
