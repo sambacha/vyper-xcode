@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXGroup section */
@@ -12,6 +12,8 @@
 			children = (
 			);
 			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
 		};
 /* End PBXGroup section */
 
@@ -22,7 +24,8 @@
 			buildConfigurationList = 435B76A12617DD4B007905C3 /* Build configuration list for PBXLegacyTarget "Vyper" */;
 			buildPhases = (
 			);
-			buildToolPath = /usr/bin/make;
+			buildToolPath = /usr/bin/python3;
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = Vyper;
@@ -44,7 +47,7 @@
 				};
 			};
 			buildConfigurationList = 435B769D2617DD4B007905C3 /* Build configuration list for PBXProject "Vyper" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -177,6 +180,7 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSION = "PYTHONPATH=. python vyper/cli/vyper_compile.py --version";
 			};
 			name = Debug;
 		};
@@ -188,6 +192,7 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSION = "PYTHONPATH=. python vyper/cli/vyper_compile.py --version";
 			};
 			name = Release;
 		};
