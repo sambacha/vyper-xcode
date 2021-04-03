@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y -qq --no-install-recommends \
         libc-dev \
         libssl-dev \
         libgmp-dev \
-    && rm -rf /var/lib/apt/lists/*
+        && rm -rf /var/lib/apt/lists/*
 
 ADD . /code
 
@@ -34,7 +34,8 @@ WORKDIR /code
 
 #ENV VYPER_REF='0.2.11'
 # Using "test" optional to include test dependencies in built docker-image
-RUN python3 setup.py install
+RUN pip install . && \
+    apt-get purge -y -qq --auto-remove apt-utils gcc libc6-dev libc-dev libssl-dev
 
 ARG USER_ID
 ARG GROUP_ID
