@@ -44,6 +44,7 @@ jobs:
             ghcr.io/sambacha/vyper-xcode:latest
             
   push_to_registry:
+    needs: docker-buildx
     name: Push Docker image to GitHub Packages
     runs-on: ubuntu-latest
     steps:
