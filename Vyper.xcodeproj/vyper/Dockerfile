@@ -32,9 +32,9 @@ ADD . /code
 
 WORKDIR /code
 
+#ENV VYPER_REF='0.2.11'
 # Using "test" optional to include test dependencies in built docker-image
-RUN pip install .[test] && \
-    apt-get purge -y -qq --auto-remove apt-utils gcc libc6-dev libc-dev libssl-dev
+RUN python3 setup.py install
 
 ARG USER_ID
 ARG GROUP_ID
