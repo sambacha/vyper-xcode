@@ -35,7 +35,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./vyper-xcode/Vyper.xcodeproj/vyper/Dockerfile
+          file: ./Vyper.xcodeproj/vyper/Dockerfile
           push: true
           platforms: linux/amd64
           cache-from: type=local,src=/tmp/.buildx-cache
