@@ -28,9 +28,9 @@ RUN apt-get update && apt-get install -y -qq --no-install-recommends \
         libgmp-dev \
         && rm -rf /var/lib/apt/lists/*
 
-ADD . /code
-
+RUN mkdir -p /code
 WORKDIR /code
+COPY . .
 
 #ENV VYPER_REF='0.2.11'
 # Using "test" optional to include test dependencies in built docker-image
