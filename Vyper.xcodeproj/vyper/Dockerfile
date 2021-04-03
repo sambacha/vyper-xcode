@@ -1,4 +1,4 @@
-FROM python:3.7-slim as base
+FROM python:3.7 as base
 
 #ENV PYTHON_VERSION=3.7.10
 ARG BUILD_DATE
